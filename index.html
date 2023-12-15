@@ -1,44 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Subway</title>
 </head>
 
 <body>
-    <h1>Subway Menu</h1>
-    <section>
-        <form action=""></form>
-        <label for="Name">Name</label>
-        <input type="textbox" name="Name" id="Name">
-        <br>
-        <label for="password">Password</label>
-        <input type="password" name="user-pw" id="user-pw">
-        </form>
-    </section>
-    <br>
-    <h1>Bread</h1>
-    <section>
-        <form>
-            <label for="bread">What bread would you like:</label>
-            
-            <select name="Bread" id="Bread">
-                <option value="White Bread">White Bread</option>
-                <option value="Wheat Bread">Wheat Bread</option>
-                <option value="Italian Herb & Cheese">Italian Herb & Cheese</option>
-                <option value="Plain Wrap">Plain Wrap</option>
-                <option value="Gluten Free Wrap">Gluten Free Wrap</option>
-                <option value="Multigrain Wrap">Multigrain Wrap</option>
-            </select>
+    <section id="overlay">
+        <hr>
+        <!--Add your code below-->
+        <form action="/practice.html" method="POST">
+            <h1>Burgers</h1>
+            <p>Getting info about burgers</p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required>
             <br>
-            <label for="Toast or No Toast">Toasted or Plain</label>
+            <label for="user-pw">Password:</label>
+            <input type="password" name="user-pw" id="user-pw" required>
             <br>
-            <input type="checkbox" id="Toasted" name="Toasted" value="Toasted">
-            <label for="Toasted">Toast</label><br>
-            <input type="checkbox" id="Plain" name="Plain" value="Plain">
-            <label for="Plain">Plain</label>
+            <label for="amount">How many subs do you want?</label>
+            <input type="number" name="amount" id="amount" step="1">
+            <br>
+            <section class="cooked">
+                <label for="doneness">
+                    <br>
+                    <span>Rare</span>
+                    <input type="range" name="doneness" id="doneness" min="0" max="5" step="0.5">
+                    <span>Well-Done</span>
+            </section>
+            <section>
+                <section class="toppings"></section>
+                <span>What toppings would you like?</span>
+                <br>
+                <input type="checkbox" id="lettuce" value="lettuce" name="topping">
+                <label for="lettuce">Lettuce</label>
+
+                <input type="checkbox" id="tomato" value="tomato" name="topping">
+                <label for="tomato">Tomato</label>
+
+                <input type="checkbox" id="xcheese" value="xcheese" name="topping">
+                <label for="xcheese"> Extra Cheese</label>
+
+                <input type="checkbox" id="bacon" value="bacon" name="topping">
+                <label for="bacon">Bacon</label>
+
+                <input type="checkbox" id="onions" value="onions" name="topping">
+                <label for="onions">Onions</label>
+
+            </section>
+            <section class="cheesy">
+                <span>Would you like to add cheese?</span>
+                <br>
+
+                <input type="radio" name="cheese" id="yes" value="yes" <label for="yes">Yes</label>
+
+                <input type="radio" name="cheese" id="no" value="no" <label for="no">no</label>
+            </section>
+            <section>
+                <label for="bun">What type of bun would you like?
+                </label>
+                <select name="bun" id="bun">
+                    <option value="sesame">Sesame</option>
+                    <option value="potato">Potato</option>
+                    <option value="pretzal">Pretzal</option>
+                    <option value="sourdough">Sourdough</option>
+                    <option value="gluten-free">Gluten Free</option>
+                </select>
+            </section>
+            <section class="sauce-selection">
+                <label for="sauce">What type of sauce would you like?</label>
+                <input type="text" list="sauces" id="sauce" name="sauce">
+
+                <datalist id="sauces">
+                    <option value="ketchup">ketchup</option>
+                    <option value="mayo">mayo</option>
+                    <option value="ranch">ranch</option>
+                    <option value="sriracha">sriracha</option>
+                </datalist>
+            </section>
+            <section>
+
+                <section class="extra-info">
+                    <label for="extra">Anything else you want to add?</label>
+                    <br>
+                    <textarea name="extra" id="extra" cols="40" rows="3">No thanks, it's perfect</textarea>
+                </section>
+
+                <br>
+
+                <section class="submission">
+                    <input type="submit">
+                </section>
+
+            </section>
         </form>
     </section>
 </body>
